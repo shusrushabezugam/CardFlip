@@ -6,7 +6,7 @@ body {
     display: grid;
     grid-gap: 1px;
     grid-template-columns: auto auto auto auto;
-    padding: 10px 150px 10px 150px;
+    padding: 10px 10px 10px 10px;
   }
   
   .grid-header-container {
@@ -57,7 +57,7 @@ body {
     height: 10em;
     background-color: rgb(75, 42, 165);
     color: white;
-    font-size: 15px;
+    font-size: 50px;
   }
   
   .hide-card {
@@ -68,14 +68,17 @@ body {
     background-image:url('smile.jpg');
     box-shadow: 0px 0px 0px rgba(68, 68, 68, 0.6);
     background-repeat: no-repeat;
-    height: 300px; /* You must set a specified height */
+    height: 300px; 
+    width:300px;/* You must set a specified height */
     background-position: center; 
   }
   
   .card-back {
     font-weight: bold;
+    height: 300px; 
+    width:300px;
   }
   
-  .react-card-front {
+ /* .react-card-front {
     position: unset !important;
-  }
+  }*/
