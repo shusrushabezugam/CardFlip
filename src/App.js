@@ -13,7 +13,7 @@ class App extends PureComponent{
   };
   static duplicateCard=()=>
   {
-    return [0,1,2,3,4,5,6,7].reduce((preValue,current,index,array)=>{
+    return ['A','B','C','D','E','F','G','H'].reduce((preValue,current,index,array)=>{
       return preValue.concat([current,current])
     },[]);
   };
@@ -38,12 +38,10 @@ class App extends PureComponent{
         const prevCardId = this.state.prevCardId;
         const newCard = this.state.shuffledCard[cardId];
         const previousCard = this.state.prevSelectedCard;
-
         this.isCardMatch(previousCard, newCard, prevCardId, cardId);
       }
     }
   };
-
   isCardMatch = (card1, card2, card1Id, card2Id) => {
     if (card1 === card2) {
       const hideCard = this.state.shuffledCard.slice();
@@ -83,7 +81,7 @@ class App extends PureComponent{
      <div>
        <Header restartGame={this.restartGame} />
        { this.isGameOver() ? <GameOver restartGame={this.restartGame} /> :
-       <div className="grid-container">
+     <div className="grid-container">
           {
             this.state.shuffledCard.map((cardNumber, index) => 
               <Card
@@ -96,6 +94,7 @@ class App extends PureComponent{
             )
           }
         </div>
+        }
        }
      </div>
     );
